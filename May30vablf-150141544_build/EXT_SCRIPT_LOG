@@ -1,0 +1,72 @@
+-------------------------
+Executing Hand edits:
+
+  
+
+
+
+Now running ~mrd599/umui_jobs/hand_edits/GA6/vn8.5_p2t_weight_fix.pl
+
+----- End of ~mrd599/umui_jobs/hand_edits/GA6/vn8.5_p2t_weight_fix.pl -----
+
+Now running ~mrd599/umui_jobs/hand_edits/GA6/vn8.5_eta_s_0.5.pl
+
+----- End of ~mrd599/umui_jobs/hand_edits/GA6/vn8.5_eta_s_0.5.pl -----
+
+Now running ~mrd599/umui_jobs/hand_edits/GA6/vn8.5_sc_1361.pl
+
+----- End of ~mrd599/umui_jobs/hand_edits/GA6/vn8.5_sc_1361.pl -----
+
+Now running ~mrd599/umui_jobs/hand_edits/GA6/vn8.5_filter_cloud_tau0.01
+
+----- End of ~mrd599/umui_jobs/hand_edits/GA6/vn8.5_filter_cloud_tau0.01 -----
+
+Now running ~mrd599/umui_jobs/hand_edits/GA6/vn8.5_ki2.63_ki_snow0.5.pl
+
+----- End of ~mrd599/umui_jobs/hand_edits/GA6/vn8.5_ki2.63_ki_snow0.5.pl -----
+
+Now running ~mrd599/umui_jobs/hand_edits/GA6/vn8.5_riverinland_fix.pl
+
+----- End of ~mrd599/umui_jobs/hand_edits/GA6/vn8.5_riverinland_fix.pl -----
+
+Now running ~mrd599/umui_jobs/hand_edits/GA6/vn8.5_emis_ssi_full.pl
+
+----- End of ~mrd599/umui_jobs/hand_edits/GA6/vn8.5_emis_ssi_full.pl -----
+
+Now running ~mrd599/umui_jobs/hand_edits/GA6/grib_api.ed
+bld::excl_dep              USE::gcom_mod
+   RECON=recon \
+4988
+5052
+----- End of ~mrd599/umui_jobs/hand_edits/GA6/grib_api.ed -----
+
+Now running ~jxs599/umui_jobs/hand_edits/vn8.5/PBS.ed
+12388
+12388
+----- End of ~jxs599/umui_jobs/hand_edits/vn8.5/PBS.ed -----
+
+Now running ~jxs599/umui_jobs/hand_edits/vn8.5/cable.ed
+ C3_IO          =      1,      1,      1,      0,      1,
+ ORIENT_IO      =      0,      0,      0,      0,      0,
+ ALBSNF_MAX_IO  =   1.43000e-01,  8.80000e-02,  1.92000e-01,  1.59000e-01,  1.15000e-01,
+ A_WL_IO        =   0.65,   0.65,  0.005,  0.005,   0.10,
+ &DOMAIN NAME="DTILE", IOPL=5
+ PSLIST=1,2,3,4,5,6,7,8,9,
+ &DOMAIN NAME="DPFTS", IOPL=5
+ PSLIST=1,2,3,4,5,
+2661
+2662
+16990
+?
+43212
+43256
+16990
+/home/599/jxs599/umui_jobs/hand_edits/vn8.5/cable.ed[259]: /ISCRNTDIAG/: not found [No such file or directory]
+/home/599/jxs599/umui_jobs/hand_edits/vn8.5/cable.ed[260]: a: not found [No such file or directory]
+Usage: . [ options ] name [arg ...]
+----- End of ~jxs599/umui_jobs/hand_edits/vn8.5/cable.ed -----
+
+End of Hand edits
+-------------------------
+    
+

@@ -1,0 +1,21 @@
+#!/bin/ksh
+#PBS -l walltime=600
+#PBS -l ncpus=1
+#PBS -l mem=2000mb
+#PBS -j oe
+#PBS -o /home/599/jxs599/um_output/vablf000.vablf.d14150.t141554.rcf.leave
+
+
+
+# Load default programming environment for PBS Pro
+. ~access/umdir/vn8.5/environment
+
+# The reconfiguration script manually sets the stacksize with this variable,
+# rather than using 'ulimit -s unlimited'
+export RCF_STACK=1 # in GB
+/home/599/jxs599/umui_runs/vablf-150141544/umuisubmit_rcf 
+CC=$?
+if [ $CC -eq 0 ]
+then
+  qsub /home/599/jxs599/umui_runs/vablf-150141544/umuisubmit_run 
+fi

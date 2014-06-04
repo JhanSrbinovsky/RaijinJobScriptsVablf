@@ -1,0 +1,19 @@
+#!/bin/ksh
+#PBS -l ncpus=4
+#PBS -l mem=8000mb
+#PBS -l walltime=3600
+#PBS -j oe
+#PBS -o /home/599/jxs599/um_output/vablf000.vablf.d14150.t141554.comp.leave
+#PBS -l software=intel-fc
+
+
+
+# Load default programming environment for PBS Pro
+. ~access/umdir/vn8.5/environment
+
+/home/599/jxs599/umui_runs/vablf-150141544/umuisubmit_compile 
+CC=$?
+if [ $CC -eq 0 ]
+then
+  qsub /home/599/jxs599/umui_runs/vablf-150141544/stage_2_submit 
+fi

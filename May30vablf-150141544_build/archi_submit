@@ -1,0 +1,14 @@
+#!/bin/ksh
+#@ shell           = /usr/bin/ksh
+#@ class           = serial
+#@ job_type        = serial
+#@ job_name        = vablf_arch
+#@ output          = /home/599/jxs599/um_output/vablf000.vablf.d14150.t141554.$(jobid).archive.leave
+#@ error           = /home/599/jxs599/um_output/vablf000.vablf.d14150.t141554.$(jobid).archive.leave
+#@ notification    = never
+#@ resources       = ConsumableMemory(300Mb)
+#@ wall_clock_limit = 01:00:00
+#@ node_usage      = shared
+#@ queue
+
+/projects/cr/cprod/archiving/bin/um_archiving /vablf

@@ -1,0 +1,33 @@
+
+ &configid
+ /
+
+ &NLSTCGEN
+ STEPS_PER_PERIODim=72,
+ SECS_PER_PERIODim=86400,
+ DUMPFREQim=720,
+ ARCHDUMP_OFFSETim=0,
+ ARCHDUMP_FREQim=0,
+ DUMPTIMESim=0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+ 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+ PPSELECTim=1,1,1,1,
+ ARCHPPSELim=0,0,0,0,
+ MEANFREQim=3,3,4,10,
+ MEAN_REFTIMEim=1981,12,1,0,0,0,
+ JOBREL_STEPim=0,0,0,0,0,0,0,0,0,0,
+ DUMP_PACKim=3,
+ LLBOUTim=.FALSE.,
+ /
+
+ &NLST_MPP
+ extended_halo_size_EW=4,
+ extended_halo_size_NS=5,
+ gcom_coll_limit=64,
+ global_sum_method=2,
+ /
+
+ &BOUNCNST
+ /
+
+
+ !!! END OF FILE !!!

@@ -1,0 +1,3 @@
+#!/bin/ksh
+
+llsubmit archi_submit
