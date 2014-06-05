@@ -1,0 +1,13 @@
+#!/bin/ksh
+#PBS -l walltime=120
+#PBS -l ncpus=64
+#PBS -l mem=128000mb
+#PBS -j oe
+#PBS -o /home/599/jxs599/um_output/vablf000.vablf.d14157.t091343.leave
+
+
+
+# Load default programming environment for PBS Pro
+. ~access/umdir/vn8.5/environment
+
+/home/599/jxs599/umui_runs/vablf-157091334/umuisubmit_run 

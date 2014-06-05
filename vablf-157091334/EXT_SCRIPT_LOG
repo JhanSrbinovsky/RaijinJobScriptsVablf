@@ -1,0 +1,125 @@
+-------------------------
+Executing Hand edits:
+
+  
+
+
+
+Now running ~mrd599/umui_jobs/hand_edits/GA6/vn8.5_p2t_weight_fix.pl
+
+----- End of ~mrd599/umui_jobs/hand_edits/GA6/vn8.5_p2t_weight_fix.pl -----
+
+Now running ~mrd599/umui_jobs/hand_edits/GA6/vn8.5_eta_s_0.5.pl
+
+----- End of ~mrd599/umui_jobs/hand_edits/GA6/vn8.5_eta_s_0.5.pl -----
+
+Now running ~mrd599/umui_jobs/hand_edits/GA6/vn8.5_sc_1361.pl
+
+----- End of ~mrd599/umui_jobs/hand_edits/GA6/vn8.5_sc_1361.pl -----
+
+Now running ~mrd599/umui_jobs/hand_edits/GA6/vn8.5_filter_cloud_tau0.01
+
+----- End of ~mrd599/umui_jobs/hand_edits/GA6/vn8.5_filter_cloud_tau0.01 -----
+
+Now running ~mrd599/umui_jobs/hand_edits/GA6/vn8.5_ki2.63_ki_snow0.5.pl
+
+----- End of ~mrd599/umui_jobs/hand_edits/GA6/vn8.5_ki2.63_ki_snow0.5.pl -----
+
+Now running ~mrd599/umui_jobs/hand_edits/GA6/vn8.5_riverinland_fix.pl
+
+----- End of ~mrd599/umui_jobs/hand_edits/GA6/vn8.5_riverinland_fix.pl -----
+
+Now running ~mrd599/umui_jobs/hand_edits/GA6/vn8.5_emis_ssi_full.pl
+
+----- End of ~mrd599/umui_jobs/hand_edits/GA6/vn8.5_emis_ssi_full.pl -----
+
+Now running ~mrd599/umui_jobs/hand_edits/GA6/grib_api.ed
+bld::excl_dep              USE::gcom_mod
+4642
+?
+----- End of ~mrd599/umui_jobs/hand_edits/GA6/grib_api.ed -----
+
+Now running ~jxs599/umui_jobs/hand_edits/vn8.5/PBS.ed
+12387
+12387
+----- End of ~jxs599/umui_jobs/hand_edits/vn8.5/PBS.ed -----
+
+Now running ~jxs599/umui_jobs/hand_edits/vn8.5/cable.ed
+ C3_IO          =      1,      1,      1,      0,      1,
+ ORIENT_IO      =      0,      0,      0,      0,      0,
+ A_WL_IO        =   0.65,   0.65,  0.005,  0.005,   0.10,
+ A_WS_IO        =  10.00,  10.00,   1.00,   1.00,  10.00,
+ ALBSNF_MAXU_IO = 0.215, 0.132, 0.288, 0.239, 0.173, 
+ ALBSNF_MAXL_IO = 0.095, 0.059, 0.128, 0.106, 0.077, 
+ ALNIRU_IO = 0.68, 0.53, 0.87, 0.87, 0.87, 
+ ALNIRL_IO = 0.30, 0.23, 0.39, 0.39, 0.39, 
+ ALPARL_IO = 0.06, 0.04, 0.06, 0.06, 0.06, 
+ ALPARU_IO = 0.15, 0.11, 0.15, 0.15, 0.15, 
+ OMEGAU_IO = 0.23, 0.23, 0.23, 0.26, 0.23, 
+ OMEGAL_IO = 0.10, 0.10, 0.10, 0.12, 0.10, 
+ OMNIRU_IO = 0.90, 0.65, 0.98, 0.98, 0.98, 
+ OMNIRL_IO = 0.50, 0.30, 0.53, 0.53, 0.53, 
+ ALBSNC_MAX_IO  =   2.50000e-01,  2.50000e-01,  6.00000e-01,  6.00000e-01,  4.00000e-01,
+ ALBSNC_MIN_IO  =   3.00000e-01,  3.00000e-01,  8.00000e-01,  8.00000e-01,  8.00000e-01,
+ ALBSNF_MAX_IO  =   1.43000e-01,  8.80000e-02,  1.92000e-01,  1.59000e-01,  1.15000e-01,
+ EMIS_PFT_IO  =   0.9800,  0.9900,  0.9800,  0.9800,  0.9800,
+ DZ0V_DH_IO  =   5.00000e-02,  5.00000e-02,  1.00000e-01,  1.00000e-01,  1.00000e-01,
+ CATCH0_IO  =   5.00000e-01,  5.00000e-01,  5.00000e-01,  5.00000e-01,  5.00000e-01,
+ DCATCH_DLAI_IO  =   5.00000e-02,  5.00000e-02,  5.00000e-02,  5.00000e-02,  5.00000e-02,
+ INFIL_F_IO  =   4.00000e+00,  4.00000e+00,  2.00000e+00,  2.00000e+00,  2.00000e+00,
+ KEXT_IO  =   5.00000e-01,  5.00000e-01,  5.00000e-01,  5.00000e-01,  5.00000e-01,
+ ROOTD_FT_IO  =   3.00000e+00,  1.00000e+00,  5.00000e-01,  5.00000e-01,  5.00000e-01,
+ Z0HM_PFT_IO  =   1.65000e+00,  1.65000e+00,  1.00000e-01,  1.00000e-01,  1.00000e-01,
+ Z0HM_CLASSIC_PFT_IO  =   1.00000e-01,  1.00000e-01,  1.00000e-01,  1.00000e-01,  1.00000e-01,
+ ALPHA_IO       =   0.08,   0.08,   0.08,  0.040,   0.08,
+ ALNIR_IO       =   0.45,   0.35,   0.58,   0.58,   0.58,
+ ALPAR_IO       =   0.10,   0.07,   0.10,   0.10,   0.10,
+ B_WL_IO        =  1.667,  1.667,  1.667,  1.667,  1.667,
+ DGL_DM_IO      =    0.0,    0.0,    0.0,    0.0,    0.0,
+ DGL_DT_IO      =    9.0,    9.0,    0.0,    0.0,    9.0,
+ DQCRIT_IO      =  0.090,  0.060,  0.100,  0.075,  0.100,
+ ETA_SL_IO      =   0.01,   0.01,   0.01,   0.01,   0.01,
+ FD_IO          =  0.015,  0.015,  0.015,  0.025,  0.015,
+ FSMC_OF_IO     =   0.00,   0.00,   0.00,   0.00,   0.00,
+ F0_IO          =  0.875,  0.875,  0.900,  0.800,  0.900,
+ G_LEAF_0_IO    =   0.25,   0.25,   0.25,   0.25,   0.25,
+ GLMIN_IO       = 1.0E-6, 1.0E-6, 1.0E-6, 1.0E-6, 1.0E-6,
+ KPAR_IO        =   0.50,   0.50,   0.50,   0.50,   0.50,
+ NEFF_IO        = 0.8e-3, 0.8e-3, 0.8e-3, 0.4e-3, 0.8e-3,
+ NL0_IO         =  0.040,  0.030,  0.060,  0.030,  0.030,
+ NR_NL_IO       =   1.00,   1.00,   1.00,   1.00,   1.00,
+ NS_NL_IO       =   0.10,   0.10,   1.00,   1.00,   0.10,
+ OMEGA_IO       =   0.15,   0.15,   0.15,   0.17,   0.15,
+ OMNIR_IO       =   0.70,   0.45,   0.83,   0.83,   0.83,
+ R_GROW_IO      =   0.25,   0.25,   0.25,   0.25,   0.25,
+ SIGL_IO        = 0.0375, 0.1000, 0.0250, 0.0500, 0.0500,
+ TLEAF_OF_IO    = 273.15, 243.15, 258.15, 258.15, 243.15,
+ TLOW_IO        =    0.0,   -5.0,    0.0,   13.0,    0.0,
+ TUPP_IO        =   36.0,   31.0,   36.0,   45.0,   36.0,
+ DUST_VEG_SCJ_IO=   0.0,     0.0,     1.0,     1.0,    0.5, 
+16990
+17161
+17161
+17581
+17581
+17850
+17850
+18130
+18130
+18328
+18328
+18393
+18393
+18494
+18494
+18526
+18526
+18687
+18687
+18889
+----- End of ~jxs599/umui_jobs/hand_edits/vn8.5/cable.ed -----
+
+End of Hand edits
+-------------------------
+    
+

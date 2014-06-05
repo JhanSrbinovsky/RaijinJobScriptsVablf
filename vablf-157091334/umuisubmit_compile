@@ -1,0 +1,134 @@
+#!/bin/ksh
+#PBS -l ncpus=4
+#PBS -l mem=8000mb
+#PBS -l walltime=3600
+#PBS -j oe
+#PBS -o /home/599/jxs599/um_output/vablf000.vablf.d14157.t091343.comp.leave
+#PBS -l software=intel-fc
+
+
+
+# Load default programming environment for PBS Pro
+. ~access/umdir/vn8.5/environment
+
+# Repository Extract switches
+EXTR_UMATMOS=false
+EXTR_JULES=false
+EXTR_FLAKE=false
+EXTR_NEMO=false
+EXTR_CICE=false
+
+# Model build switches
+COMP_UMSCRIPTS=false
+COMP_UMATMOS=false
+COMP_UMRECON=false
+COMP_NEMO=false
+COMP_CICE=false
+COMP_NEMO_CICE=false
+COMP_UM_NEMO_CICE=false
+ 
+#---------------------------------------------------------------------
+# Script: FCM_BLD_COMMAND
+#---------------------------------------------------------------------
+#
+# Purpose: generates build command(s) depending on models 
+#          chosen and links separate builds to the top 
+#          level bin directory
+#
+# Created from umui vn8.5
+#---------------------------------------------------------------------
+
+
+# Load default programming environment for PBS Pro
+. ~access/umdir/vn8.5/environment
+
+#---------------------------------------------
+# User defined environment variables
+#---------------------------------------------
+export UM_RAD_SPECTRAL_GL=$UMDIR/vn$VN/ctldata/spectral
+export STARTDUMPS=/projects/access/data/input_dumps/GA6
+
+#---------------------------------------------
+# Job specific variables
+#---------------------------------------------
+export RUNID=vablf
+export USERID=$USER
+export DATAW=/short/$PROJECT/$USER/$RUNID
+
+UM_ROUTDIR=/short/$PROJECT/$USER/UM_ROUTDIR/$USERID/$RUNID
+UM_RDATADIR=/short/$PROJECT/$USER/$RUNID
+
+# Build command common part
+BLD_CMD="fcm build -v 3 -j 4 "     
+
+# Loop through all sub-models and build if requested
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+typeset -l blddir
+
+for item in UMSCRIPTS UMATMOS UMRECON NEMO CICE NEMO_CICE UM_NEMO_CICE
+do
+  eval compval=\$COMP_${item}
+  blddir=$item
+
+  if test $compval = "true" ; then
+    echo COMP_${item} is true - run build command
+    $BLD_CMD $UM_ROUTDIR/$blddir/cfg/bld.cfg
+
+    RC=$?
+    if test $RC -eq 0 ; then
+      echo ${item} build is OK
+    else
+      echo ${item} build failed
+      exit $RC
+    fi
+  fi
+done
+
+# Link separate builds to the top level bin dir
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+mkdir -p $UM_RDATADIR/bin
+RC=$?
+if test $RC -ne 0 ; then
+  echo mkdir $UM_RDATADIR/bin failed
+  exit $RC
+fi
+
+for item in UMSCRIPTS UMATMOS UMRECON NEMO CICE NEMO_CICE UM_NEMO_CICE
+do
+  blddir=$item
+
+  if test "$item" = "UMSCRIPTS" ; then
+    if test -d $UM_ROUTDIR/$blddir/bin ; then
+      chmod 755 $UM_ROUTDIR/$blddir/bin/* 1>/dev/null 2>&1
+      cp -f $UM_ROUTDIR/$blddir/bin/*  $UM_RDATADIR/bin/ 1>/dev/null 2>&1
+    fi
+  else
+    if test "$item" = "UMRECON" ; then
+      exepath=$DATAW/bin
+      exename=qxreconf
+
+    elif test "$item" = "UMATMOS" ; then
+      exepath=$DATAW/bin
+      exename=$RUNID.exe
+
+    else
+      exepath=$UM_RDATADIR/bin
+      if test $item = "CICE" ; then
+        exename=CICE.exe
+      else
+        exename=
+      fi
+    fi
+
+    eval compval=\$COMP_${item}
+    if test $compval = "true" ; then
+      mkdir -p $exepath
+      if test -x $UM_ROUTDIR/$blddir/bin/$exename ; then
+        cp -f $UM_ROUTDIR/$blddir/bin/$exename $exepath/ 1>/dev/null 2>&1
+      fi
+    fi
+  fi
+ 
+done
+
